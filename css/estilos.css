@@ -1,10 +1,22 @@
 /* Aula inicial :D */
 body {
-  background-image: url("https://www.cronosolucoes.com.br/wp-content/uploads/2018/10/765090-most-popular-technology-background-images-1920x1080-hd-for-mobile.jpg");
+  /* background-image: url("https://www.cronosolucoes.com.br/wp-content/uploads/2018/10/765090-most-popular-technology-background-images-1920x1080-hd-for-mobile.jpg"); */
   background-size: 100vh;
   font-family: arial;
   height: 100vh;
 }
+
+body::after {
+    background: url("https://www.cronosolucoes.com.br/wp-content/uploads/2018/10/765090-most-popular-technology-background-images-1920x1080-hd-for-mobile.jpg");
+    content: "";
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;   
+  }
 
 .menu{
   background-color: white;

@@ -1,0 +1,37 @@
+/* Aula inicial :D */
+body {
+  background-image: url("https://www.cronosolucoes.com.br/wp-content/uploads/2018/10/765090-most-popular-technology-background-images-1920x1080-hd-for-mobile.jpg");
+  background-size: 100vh;
+  font-family: arial;
+  height: 100vh;
+}
+
+.menu{
+  background-color: white;
+}
+.menu ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+a{
+  color: teal;
+  text-decoration: none;
+  }
+a:hover {
+  text-decoration: underline;
+}
+
+.site-subtitle,
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-subtitle {
+  font-style: italic;
+}

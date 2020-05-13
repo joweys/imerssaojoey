@@ -1,9 +1,18 @@
-/* Aula inicial :D */
+/* Reset do CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Continuacao */
+
 body {
   /* background-image: url("https://www.cronosolucoes.com.br/wp-content/uploads/2018/10/765090-most-popular-technology-background-images-1920x1080-hd-for-mobile.jpg"); */
   background-size: 100vh;
-  font-family: arial;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   height: 100vh;
+  font-size: 10px;
 }
 
 body::after {
@@ -18,9 +27,51 @@ body::after {
     z-index: -1;   
   }
 
-.menu{
+  /* Se a tela tiver pelo menos 400 pixels vai carregar estes estilos */
+  @media (min-width: 400px) {
+    body {
+      font-size: 16px;
+    }
+  }
+
+/* breakpoint */
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+  }
+
+  /* breakpoint */
+  @media (min-width: 1200px) {
+    body {
+      font-size: 22px;
+    }
+  }
+
+  header {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+.menu {
   background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
+
+.menu a {
+  padding: 10px 20px;
+  display: block;
+}
+
+.menu a:hover {
+  text-shadow: -2px 0px 14px rgb(254, 253, 255);
+  transform: scale(1.5);
+}
+
 .menu ul{
   display: flex;
   justify-content: space-around;
@@ -30,20 +81,92 @@ body::after {
   list-style: none;
 }
 
+.desce {
+  bottom: 0;
+  color: antiquewhite;
+  font-size: 3em;
+  padding: 1em;
+  position: absolute;
+  text-decoration: none;
+  transform: rotate(90deg);
+}
+
 a{
   color: teal;
   text-decoration: none;
   }
+  
+/* 
 a:hover {
   text-decoration: underline;
 }
+*/
 
 .site-subtitle,
 .site-title {
   color: whitesmoke;
-  text-align: center;
+  text-align: center; 
+}
+
+.site-title {
+  font-size: 4em;
+  font-family: 'Patrick Hand SC', cursive;
 }
 
 .site-subtitle {
-  font-style: italic;
+  font-size: 1em;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  line-height: 1.5em;
+}
+
+.portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.portfolio h2 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: darkred;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media(min-width: 560px){
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media(min-width: 880px){
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+    background-color: whitesmoke;
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 10%;
+}
+
+@media (min-width: 1200px){
+  .img-portfolio {
+    height: auto;
+    width: 100%;
+  }
 }

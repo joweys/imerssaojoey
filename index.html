@@ -9,40 +9,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">  
+  <script src="https://kit.fontawesome.com/ee4cd09a66.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
   <header>
     <nav class="menu">
-      <ul>
+      <ul class="container">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="#">Projetos</a></li>
-        <li><a href="https://www.alura.com.br/imersao-css/aula03-grid?utm_campaign=imersao_hipsterscss_aula_03&utm_medium=email&utm_source=RD+Station" target="_blank">Aula 3</a></li>
-        <li><a href="contato.html">Contato</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
-    <div>
+    <div class="titulo">
       <h1 class="site-title">Ramos, R.</h1>
       <h2 class="site-subtitle">jr. web developer</h2>
       <h2 class="site-subtitle">sr. email responder</h2>
     </div>
-    <a href="#" class="desce">&#10095;</a>
+    <a href="#portfolio" class="desce">&#10095;</a>
 
   </header>
 
-  <section class=portfolio>
+  <section class="sobre container">
+    <h2>Sobre</h2>
+    <figure class="avatar">
+      <img src="https://pbs.twimg.com/profile_images/747497355914665985/pI5Zb3O6_400x400.jpg" alt"Joey">
+    </figure>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis earum animi suscipit? Dolorem nisi aut explicabo odit obcaecati sequi vel quas beatae repellendus, dolores, suscipit nobis quidem earum accusantium quod!
+      </p>
+      <p>
+        Quia ratione repudiandae fugit aliquam maiores debitis corporis magni obcaecati reprehenderit mollitia sequi ipsum rerum sunt unde officiis, illo hic harum dolorem consequatur consectetur nostrum saepe autem est? Eum, velit?
+      </p>
+      <p>
+        Obcaecati doloremque necessitatibus fugit, in officia tenetur, autem soluta velit maiores quidem nesciunt iste et ipsa, voluptates nihil pariatur totam harum omnis ratione veritatis nulla ex consectetur! Hic, harum aut?
+      </p>
+      <p>
+        Totam, ratione placeat voluptatibus quae repudiandae inventore perferendis debitis atque mollitia rem temporibus nam quis voluptates aliquid, quod magni suscipit nemo corrupti, perspiciatis quibusdam fugit minus delectus harum blanditiis. Delectus?
+      </p>
+      <P>
+        Este site foi construído durante a <a href="http://www.alura.com.br/imersao-css"> Imersão CSS </a>da Alura ;)
+      </P>
+  </section>
+
+
+  <section class="portfolio container" id="portfolio">
     <h2>Projetos</h2>
 
     <div class="grid">
-
-      <figure>
-        <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-        <figcaption>eCommerce</figcaption>
-      </figure>
       <figure>
         <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
         <figcaption>Mobile</figcaption>
       </figure>
+      <figure>
+        <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
+        <figcaption>eCommerce</figcaption>
+      </figure>      
       <figure>
         <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
         <figcaption>Web design</figcaption>
@@ -62,6 +87,24 @@
 
     </div>
 
+  </section>
+
+  <section class="contato container" id="contato">
+    <h2>Contato</h2>
+    <div class="grid icons">
+      <a target="_blank" href="https://github.com/joeyvix">
+        <i class="fab fa-github"> </i> 
+      </a>
+      <a target="_blank" href="https://twitter.com/joeyvix">
+        <i class="fab fa-twitter-square"> </i>
+      </a>
+      <a target="_blank" href="https://linkedin.com/in/ramony">
+        <i class="fab fa-linkedin"> </i>
+      </a>
+      <a href="http://instagram.com/joeyvix">
+        <i class="fab fa-instagram"> </i> 
+      </a>
+    </div>
   </section>
 
 </body>

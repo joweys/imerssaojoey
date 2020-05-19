@@ -53,23 +53,32 @@ body::after {
     height: 100vh;
     justify-content: center;
     align-items: center;
-  }
+  } 
 
 .menu {
   background-color: white;
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 
 .menu a {
   padding: 10px 20px;
   display: block;
+  transition: background-color 1.5s, color 1.5s;
 }
 
 .menu a:hover {
-  text-shadow: -2px 0px 14px rgb(254, 253, 255);
-  transform: scale(1.5);
+  background-color: gray;
+  color: white;
+  /* text-shadow: -2px 0px 14px rgb(254, 253, 255);*/
+  /* transform: scale(2); */
+}
+
+.menu a:active {
+  background-color: darkgrey;
+  color: black;
 }
 
 .menu ul{
@@ -81,6 +90,20 @@ body::after {
   list-style: none;
 }
 
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
 .desce {
   bottom: 0;
   color: antiquewhite;
@@ -89,6 +112,7 @@ body::after {
   position: absolute;
   text-decoration: none;
   transform: rotate(90deg);
+  transition: 1s;
 }
 
 a{
@@ -119,16 +143,63 @@ a:hover {
   line-height: 1.5em;
 }
 
+.sobre,
+.contato,
 .portfolio {
   padding: 2em;
-  height: 100vh;
+  min-height: 100vh;
+  /* margin-left: auto ;
+  margin-right: auto;*/
 }
 
+@media (min-width: 1200px) {
+  .container {
+   margin-left: auto ;
+   margin-right: auto;
+   max-width: 1200px;
+  }
+}
+
+.sobre h2,
+.contato,
 .portfolio h2 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   color: darkred;
   margin-bottom: 1.5em;
   font-size: 2em;
+}
+
+.sobre p {
+  color: black;
+  text-indent: 1.4em;
+  margin-bottom: 1.5em;
+  text-align: justify;
+  font-family: monospace;
+}
+
+.sobre a {
+  color: rgb(0, 168, 0);
+  background-color: whitesmoke;
+}
+
+.sobre a:hover {
+  background-color: wheat;
+}
+
+.sobre .avatar {
+  float: right;
+  margin-left: 2em;
+}
+
+ .sobre .avatar img {
+   border-radius: 5%;
+}
+
+@media (min-width: 560px) {
+  .sobre .avatar img {
+    clip-path: polygon(100% 0%, 87% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    border-radius: 0%;
+  }
 }
 
 .portfolio .grid {
@@ -158,15 +229,42 @@ a:hover {
 
 .img-portfolio {
   height: 180px;
-  width: 240px;
+  width: 100%;
   object-fit: cover;
-  object-position: left;
-  border-radius: 10%;
+  object-position: left bottom;
+  border-radius: 5%;
+  transition: transform 500ms;
 }
+
+ .img-portfolio:hover {
+  transform: scale(1.1);
+} 
+
+
 
 @media (min-width: 1200px){
   .img-portfolio {
     height: auto;
     width: 100%;
   }
+}
+
+.contato a {
+  font-size: 4em;
+  color: brown;
+  transition: text-shadow 1s;
+
+}
+
+.contato a:hover {
+  text-decoration: none;
+  text-shadow:0px 0px 30px gray;
+}
+
+.contato a:active {
+  color: black;
+}
+
+.contato .icons {
+  text-align: center;
 }
